@@ -1,0 +1,188 @@
+<?php
+
+require 'steamauth/steamauth.php';
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+    <title>Epoxidez-noober</title>
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/Hover-master/css/hover.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="assets/js/hover.zoom.js"></script>
+    <script src="assets/js/hover.zoom.conf.js"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <!-- Static navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Epoxidez</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="work.html">Work</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><?php
+if(!isset($_SESSION['steamid'])) {
+     echo "<div style='margin: 30px auto; text-align: center;'>Welcome Guest! Please log in!<br>";
+    loginbutton();
+  echo "</div>";
+
+}  else {
+
+    include ('steamauth/userInfo.php'); //To access the $steamprofile array
+    //Protected content
+
+    logoutbutton(); //Logout Button
+}     
+?></li>
+            
+          </ul>
+          <form class="navbar-form navbar-left">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+      <!-- +++++ Welcome Section +++++ -->
+      <div id="ww">
+        
+        
+        <div class="col-lg-8 col-lg-offset-2">
+          <div>
+            <div style="border: 10px; margin-top: 100px" class="hvr-glow">
+              <a href="LQ-GH.html" title="DeMoN, mason, BuLba and Dubu form Team Onyx" >
+                <span style="border-radius: 5px;box-shadow: 5px ;border: 10px;">
+                  <img class="box_picture" src="assets/img/LQ-GH.jpg" alt="LQ" align="left" style="border-right: 5px; margin-right: 15px">
+                  <h3>It's official - GH joins Team Liquid</h3>
+                  <p>
+                    After a spectacular performance in Dreamleague as a stand in, Maroun 'GH' Merhej officially completes the 9k Trio in Team Liquid.
+                  </span>
+                </a>
+              </div>
+              <div style="border: 10px; margin-top: 15px" class="hvr-glow">
+                <a href="+" title="DeMoN, mason, BuLba and Dubu form Team Onyx" >
+                  <span style="border-radius: 5px;box-shadow: 5px ;border: 10px;">
+                    <img class="box_picture" src="assets/img/demon.jpeg" alt="dota2" align="left" style="border-right: 5px; margin-right: 15px">
+                    <h3>DeMoN, mason, BuLba and Dubu form Team Onyx</h3>
+                    <p>
+                      The squad features DeMoN reunited with TI4-Star Mason and former Evil Genius BuLba along with MVP Phoenix's beastly support player DuBu, with the last member of the team currently unknown.
+                    </span>
+                  </a>
+                </div>
+                <span>
+                  <div style="border: 10px; margin-top: 15px;" class="hvr-glow">
+                    <a href="dota7.00.html" title="dota7.00" >
+                      <span style="border-radius: 5px;box-shadow: 5px;border: 10px;">
+                        <img class="box_picture" src="assets/img/dota7.00.jpg" alt="dota2" align="left" style="border-right: 5px; margin-right: 15px">
+                        <h3>Better Life for Supports?</h3>
+                        <p>
+                          When the patch notes for 7.00 were released, many players thought life for supports was going to get significantly easier. Support heroes received interesting, new talents, some providing either a choice between extra Gold or XP.
+                        </p>
+                      </span>
+                    </a>
+                  </div>
+                  <!-- box2 -->
+                  <div style="border: 10px; margin-top: 15px" class="hvr-glow">
+                    <a href="readeytoplay.html" title="readey to play dota7.00" >
+                      <span style="border-radius: 5px;box-shadow: 5px ;border: 10px;">
+                        <img class="box_picture" src="assets/img/tiny.jpg" alt="dota2" align="left" style="border-right: 5px; margin-right: 15px">
+                        <h3>READYING UP FOR 7.00</h3>
+                        <p>
+                          7.00 has been released almost a week ago, yet many players still struggle with the new mechanics, UI and the general chaos that always signifies the beginning of a patch. To help catch people up to speed.
+                        </span>
+                      </a>
+                    </div>
+                    <span><!-- span-left-box -->
+                    
+                    <!-- <img src="assets/img/Roshan.png" alt="Stanley">
+                    <h1>Hi, I am Epoxidez!</h1>
+                    <p>Hello everybody. I'm Epoxidez, สวัสดีครับผมชื่อ นาย จักรพันธุ์ หันจรัส ชื่อเล่น จิ๊บ ชอบเล่นเกมส์เป็นงานอดิเรก เขียนโปรแกรมบ้างมั้ง 555+ </p>
+                    <p>ใครอยากเล่นเกมส์กับผมตามลิ้งนี้เลย <a href="http://steamcommunity.com/id/kukkaaa/">Steam profile</a> </p>
+                    -->
+                    </div><!-- /col-lg-8 -->
+                    <span class="tournament_dota2">
+                      <h3>Tournament</h3>
+                      <ul>
+                        <li class="tournament_list hvr-grow-shadow"><img src="assets/img/Bostonmajor.jpg" alt="Bostonmajor" class="box_picture_right"></li>
+                        <li class="tournament_list hvr-grow-shadow"><img src="assets/img/KievMajor.jpg" alt="Kievmajor" class="box_picture_right"></li>
+                        <li class="tournament_list hvr-grow-shadow"><img src="assets/img/ESLOneGenting2017.jpg" alt="ESLOne" class="box_picture_right"></li>
+                        <li class="tournament_list hvr-grow-shadow"><img src="assets/img/Dota_Pit_Season_5.jpg" alt="DotaPit" class="box_picture_right"></li>
+                        <li class="tournament_list hvr-grow-shadow"><img src="assets/img/WESG_ICON.jpg" alt="WESG" class="box_picture_right"></li>
+                        <li class="tournament_list hvr-grow-shadow"><img src="assets/img/SLiLeagueS3.jpg" alt="SLiLeagueS3" class="box_picture_right"></li>
+                      </ul>
+                    </span>
+                    
+                    </div><!-- /ww -->
+                    <!-- +++++ Projects Section +++++ -->
+                    <div class="container pt">
+                      
+                      </div><!-- /container -->
+                      <!-- +++++ Footer Section +++++ -->
+                      <div id="footer">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-lg-4">
+                              <h4>Contact us and we'll get back to you within 24 hours.</h4>
+                              <p><span class="glyphicon glyphicon-map-marker"></span> Khonkaen, TH</p>
+                              <p><span class="glyphicon glyphicon-phone"></span> 096-5105260</p>
+                              <p><span class="glyphicon glyphicon-envelope"></span>  jakkrapan051@gmail.com</p>
+                              </div><!-- /col-lg-4 -->
+                              <div class="col-lg-4">
+                                <h4>My Links</h4>
+                                <p>
+                                  <p><a href="https://plus.google.com/101446976929005628826" class="Link_bottom"><img  class="size_socialpicture hvr-grow-shadow" src="assets/img/googleplus.png" alt ="googleplus">Google+</a><br/></p>
+                                  <p><a href="http://steamcommunity.com/id/kukkaaa/" class="Link_bottom"><img class="size_socialpicture hvr-grow-shadow" src="assets/img/steam.png" alt="Steam">Steam</a><br/></p>
+                                  <p><a href="https://www.facebook.com/JIBJEETHSF" class="Link_bottom"><img class="size_socialpicture hvr-grow-shadow" src="assets/img/facebook500.png" alt="Facebook">Facebook</a></p>
+                                </p>
+                                </div><!-- /col-lg-4 -->
+                                <div class="col-lg-4">
+                                  <h4>Comment me ty</h4>
+                                  <div class="row">
+                                    <div class="col-sm-6 form-group">
+                                      <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                                    </div>
+                                    <div class="col-sm-6 form-group">
+                                      <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                                    </div>
+                                  </div>
+                                  <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+                                  <div class="row">
+                                    <div class="col-sm-12 form-group">
+                                      <button class="btn btn-default pull-right" type="submit">Send</button>
+                                    </div>
+                                    </div><!-- /col-lg-4 -->
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- Bootstrap core JavaScript
+                              ================================================== -->
+                              <!-- Placed at the end of the document so the pages load faster -->
+                              <script src="assets/js/bootstrap.min.js"></script>
+                            </body>
+                          </html>
